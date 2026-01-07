@@ -8,8 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ⬅️ ROUTE UTAMA
 app.use("/", absensiRoutes);
 
-// ⬅️ EXPORT APP (WAJIB)
 module.exports = app;
