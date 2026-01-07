@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controllers/absensiController");
 
-router.get("/absensi", controller.getAbsensi);
-router.post("/absensi", controller.createAbsensi);
-router.put("/absensi/:id", controller.updateAbsensi);
-router.delete("/absensi/:id", controller.deleteAbsensi);
+const {
+  getAbsensi,
+  createAbsensi
+} = require("../controllers/absensiController");
+
+router.get("/", getAbsensi);
+router.post("/", createAbsensi);
 
 module.exports = router;

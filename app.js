@@ -2,16 +2,17 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const absensiRoutes = require("./routes/absensi");
+const absensiRoutes = require("../routes/absensi");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// ⬅️ JANGAN pakai /api di sini
-app.use("/absensi", absensiRoutes);
+// ROUTE API
+app.use("/api/absensi", absensiRoutes);
 
+// OPTIONAL TEST
 app.get("/", (req, res) => {
   res.send("API Absensi Mahasiswa berjalan 🚀");
 });
