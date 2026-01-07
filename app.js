@@ -9,10 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ROUTE API
-app.use("/api/absensi", absensiRoutes);
+// ⬅️ JANGAN pakai /api di sini
+app.use("/absensi", absensiRoutes);
 
-// OPTIONAL: test endpoint
 app.get("/", (req, res) => {
   res.send("API Absensi Mahasiswa berjalan 🚀");
 });
